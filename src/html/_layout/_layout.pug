@@ -29,8 +29,12 @@ html
     .page
       if useHeader
         include ../_components/_header.pug
+      include ../_components/_menu-nav.pug
 
-      block main-content
+      .main
+        include ../_components/_sidebar.pug
+        .main-content
+          block main-content
 
       if useFooter
         include ../_components/_footer.pug

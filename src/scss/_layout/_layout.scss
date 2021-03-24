@@ -1,0 +1,33 @@
+body {
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  color: $color-black-2;
+  background-color: $color-white-2;
+}
+
+.main {
+  display: flex;
+  min-height: calc(100vh - 337px);
+  padding: 20px 0;
+  padding-right: 30px;
+
+  @include mq(991) {
+    display: block;
+    padding: 40px 20px;
+    min-height: calc(100vh - 317px);
+  }
+
+  @include mq(768) {
+    min-height: calc(100vh - 366px);
+  }
+
+  &-content {
+    width: calc(100% - 300px);
+
+    @include mq(991) {
+      width: 100%;
+    }
+  }
+}

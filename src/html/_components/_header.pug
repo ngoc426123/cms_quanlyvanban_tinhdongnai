@@ -1,20 +1,25 @@
 header.header(data-header)
-  .container
-    .header__main
-      .header__logo
-        a(href="index.html")
-          img(src="images/logo.png", alt="logo")
-      .header__tools
-        .header__menu
-          ul
-            li.home
-              a(href="index.html")
-                span Home
+  .header__group
+    .header__logo 
+      a(href="")
+        img(src="/images/logo.png", alt="")
+    .header__slogan QUẢN LÝ VĂN BẢN VÀ CHỈ ĐẠO ĐIỀU HÀNH
+  .header__group
+    .header__search 
+      form(action="" method="post")
+        button
+          i.fa.fa-search 
+        input(type="text" placeholder="Tìm kiếm")
+    .header__member(data-member)
+      .header__member-toggle(data-member-toggle)
+        .header__member-avatar
+          .header__member-wrap
+            img(src="/images/avatar.jpg", alt="")
+        .header__member-name <span>Xin chào,</span> <strong>Nguyễn An</strong>
+      .header__member-dropdown
+        .header__member-menu
+          ul 
             li
-              a(href="index.html") About
+              a(href="") Thông tin cá nhân
             li
-              a(href="index.html") News
-            li
-              a(href="index.html") Recruit
-            li
-              a(href="index.html") Contact
+              a(href="") Thoát

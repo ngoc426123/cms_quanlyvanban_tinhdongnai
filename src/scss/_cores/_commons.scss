@@ -35,3 +35,11 @@ li {
 img {
   max-width: 100%;
 }
+
+* {
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}

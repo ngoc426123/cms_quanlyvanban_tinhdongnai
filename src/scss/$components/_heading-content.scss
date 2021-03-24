@@ -1,0 +1,10 @@
+.heading-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  @include mq(768) {
+    display: block;
+  }
+}

@@ -1,0 +1,29 @@
+.breadcrumb {
+  ul {
+    display: flex;
+    align-items: center;
+
+    @include mq(768) {
+      justify-content: flex-end;
+    }
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: 15px;
+      padding-right: 25px;
+      position: relative;
+
+      &::before {
+        content: "\f105";
+        position: absolute;
+        @extend %font-icon;
+        @extend %prr;
+      }
+    }
+  }
+
+  a {
+    display: block;
+  }
+}
