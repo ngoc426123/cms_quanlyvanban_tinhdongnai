@@ -1,0 +1,41 @@
+.table {
+  table {
+    width: 100%;
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        td {
+          background-color: $color-blue-5;
+        }
+      }
+    }
+  }
+
+  th {
+    height: 60px;
+    padding: 0 10px;
+    border-bottom: 2px solid $color-gray-4;
+
+    &:first-child {
+      padding-left: 30px;
+    }
+
+    &:last-child {
+      padding-right: 30px;
+    }
+  }
+
+  td {
+    padding: 20px 10px;
+
+    &:first-child {
+      padding-left: 30px;
+    }
+
+    &:last-child {
+      padding-right: 30px;
+    }
+  }
+}

@@ -8,7 +8,7 @@
   position: relative;
   z-index: 2;
 
-  @include mq(1200) {
+  @include mq(1366) {
     padding: 8px 15px;
   }
 

@@ -1,3 +1,11 @@
+* {
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -36,10 +44,39 @@ img {
   max-width: 100%;
 }
 
-* {
-  outline: none;
 
-  &:focus {
-    outline: none;
+p {
+  padding-bottom: 15px;
+}
+
+.img {
+  &-sm {
+    max-width: 20px;
+  }
+}
+
+.text {
+  &-red {
+    color: $color-red-1;
+  }
+
+  &-blue {
+    color: $color-blue-12;
+  }
+}
+
+.text {
+  &-bold {
+    font-weight: bold;
+  }
+
+  &-italic {
+    font-style: italic;
+  }
+}
+
+.text {
+  &-wrap {
+    word-break: break-all;
   }
 }
