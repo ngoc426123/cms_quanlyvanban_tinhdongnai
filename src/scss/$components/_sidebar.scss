@@ -40,24 +40,28 @@
   }
 
   &__item-menu {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    height: 80px;
-    padding: 10px 30px;
-    margin-bottom: 10px;
-    background-color: $color-white-1;
-    box-shadow: 0 0 30px $color-shadow-1;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
     position: relative;
 
-    @include mq(991) {
-      box-shadow: none;
-    }
+    &--item {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      height: 80px;
+      padding: 10px 30px;
+      margin-bottom: 10px;
+      background-color: $color-white-1;
+      box-shadow: 0 0 30px $color-shadow-1;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: relative;
 
-    &:hover {
-      background-color: $color-blue-10;
+      @include mq(991) {
+        box-shadow: none;
+      }
+
+      &:hover {
+        background-color: $color-blue-10;
+      }
     }
 
     &--icon {
@@ -156,7 +160,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    
+
     @include mq(991) {
       display: block;
     }

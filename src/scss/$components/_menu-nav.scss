@@ -14,15 +14,11 @@
   }
 
   li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 70px;
     position: relative;
 
     @include mq(768) {
-      width: 50%;
+      width: 100%;
     }
 
     &:not(:last-child) {
@@ -33,6 +29,14 @@
         right: 0;
         bottom: 10px;
         border-right: solid 1px $color-gray-2;
+
+        @include mq(768) {
+          display: none;
+        }
+      }
+
+      @include mq(768) {
+        border-bottom: 1px solid $color-gray-5;
       }
     }
 
@@ -46,12 +50,13 @@
 
     &:hover {
       background-color: $color-blue-2;
- 
+
       &::before {
         border-right-color: $color-blue-2;
       }
 
-      #{$element}__text {
+      #{$element}__text,
+      #{$element}__toggle {
         color: $color-white-1;
       }
 
@@ -60,6 +65,74 @@
           filter: brightness(2.5);
         }
       }
+
+      > ul {
+        display: block;
+
+        @include mq(768) {
+          display: none;
+        }
+      }
+    }
+
+    &.active {
+      > ul {
+        @include mq(768) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  ul ul {
+    display: none;
+    background-color: $color-white-1;
+    box-shadow: 0 0 30px $color-shadow-1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    @include mq(768) {
+      position: static;
+      background-color: $color-gray-2;
+    }
+
+    li {
+      display: block;
+      height: auto;
+
+      &:not(:last-child) {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      padding: 15px 20px;
+      transition: none;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    position: relative;
+
+    @include mq(768) {
+      padding: 10px 20px;
+      padding-right: 40px;
+      justify-content: flex-start;
     }
   }
 
@@ -96,9 +169,8 @@
       line-height: 22px;
     }
 
-    @include mq(767) {
-      font-size: 12px;
-      line-height: 18px;
+    @include mq(768) {
+      max-width: 100%;
     }
   }
 
@@ -109,5 +181,22 @@
     bottom: 0;
     left: 0;
     z-index: 1;
+  }
+
+  &__toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: $color-blue-8;
+    position: absolute;
+    @extend %prr;
+    z-index: 2;
+    cursor: pointer;
+
+    @include mq(768) {
+      display: flex;
+    }
   }
 }

@@ -1,22 +1,54 @@
-.menu-nav
+.menu-nav(data-menu-nav)
   ul
+    li(data-menu)
+      .menu-nav__item
+        .menu-nav__icon
+          img(src="images/i-1.svg", alt="")
+        .menu-nav__text Quản lý văn bản
+        .menu-nav__toggle(data-toggle)
+          i.fa.fa-chevron-circle-down
+        a(href="").menu-nav__link
+      ul
+        li
+          a(href="") Sub menu 1
+        li
+          a(href="") Sub menu 2
+        li
+          a(href="") Sub menu 3
+        li
+          a(href="") Sub menu 4
+    li(data-menu)
+      .menu-nav__item
+        .menu-nav__icon
+          img(src="images/i-2.svg", alt="")
+        .menu-nav__text Hồ sơ lưu trữ
+        .menu-nav__toggle(data-toggle)
+          i.fa.fa-chevron-circle-down
+        a(href="").menu-nav__link
+      ul
+        li
+          a(href="") Sub menu 1
+        li
+          a(href="") Sub menu 2
+        li
+    li(data-menu)
+      .menu-nav__item
+        .menu-nav__icon
+          img(src="images/i-3.svg", alt="")
+        .menu-nav__text Chỉ đạo điều hành
+        .menu-nav__toggle(data-toggle)
+          i.fa.fa-chevron-circle-down
+        a(href="").menu-nav__link
+      ul
+        li
+          a(href="") Sub menu 1
+        li
+          a(href="") Sub menu 2
+        li
+          a(href="") Sub menu 3
     li
-      .menu-nav__icon 
-        img(src="images/i-1.svg", alt="")
-      .menu-nav__text Quản lý văn bản
-      a(href="").menu-nav__link
-    li
-      .menu-nav__icon 
-        img(src="images/i-2.svg", alt="")
-      .menu-nav__text Hồ sơ lưu trữ
-      a(href="").menu-nav__link
-    li
-      .menu-nav__icon 
-        img(src="images/i-3.svg", alt="")
-      .menu-nav__text Chỉ đạo điều hành
-      a(href="").menu-nav__link
-    li
-      .menu-nav__icon 
-        img(src="images/i-4.svg", alt="")
-      .menu-nav__text Văn bản cá nhân
-      a(href="").menu-nav__link
+      .menu-nav__item
+        .menu-nav__icon
+          img(src="images/i-4.svg", alt="")
+        .menu-nav__text Văn bản cá nhân
+        a(href="").menu-nav__link

@@ -6,7 +6,7 @@
   padding: 8px 30px;
   background-color: $color-blue-1;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
   @include mq(1366) {
     padding: 8px 15px;
@@ -181,7 +181,7 @@
       li {
         &:not(:last-child) {
           margin-bottom: 15px;
-        } 
+        }
       }
 
       a {
