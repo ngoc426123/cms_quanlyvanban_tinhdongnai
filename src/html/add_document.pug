@@ -1,0 +1,167 @@
+extends _layout/_layout
+
+block append vars 
+  - title = 'Add document'
+
+block main-content
+  .heading-content
+    .heading-group
+      .heading-group__icon 
+        img(src="images/i-6.svg", alt="")
+      .heading-group__title 
+        h1 Thêm văn bản mới 
+    .breadcrumb
+      ul 
+        li 
+          a(href="") Trang chủ 
+        li 
+          a(href="") Thêm văn bản mới 
+  .page-content
+    .box(data-box)
+      .box__tools
+        ul 
+          li 
+            a(href="")
+              span.fa-plus Thêm mới
+          li 
+            a(href="")
+              span.fa-save Lưu và nhập tiếp
+          li 
+            a(href="")
+              span.fa-link Liên kết
+          li 
+            a(href="")
+              span.fa-redo Nhập lại
+          li 
+            a(href="")
+              span.fa-file Dự thảo văn bản
+      .box__content
+        .form-design
+          form(action="" method="post")
+            .row 
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Loại văn bản <span class="text-red">(*)</span>
+                  .form-design__form-input
+                    input(type="text" class="form-control")
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Lĩnh vực
+                  .form-design__form-input
+                    select(class="form-control")
+                      option(value="1") Nhà đất 
+                      option(value="2") Hộ tịnh 
+                      option(value="3") Khai sinh 
+              .col-12
+                .form-design__row 
+                  label Lĩnh vực
+                  .form-design__form-input
+                    textarea(placeholder="Nội dung trích yếu" class="form-control")
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Người ký văn bản
+                  .form-design__form-input
+                    .form-design__form-group
+                      input(type="text" placeholder="Nhập họ tên" class="form-control")
+                      .form-design__form-group--addon
+                        button.btn.btn-default
+                          i.fa.fa-copy
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Người ký nháy
+                  .form-design__form-input
+                    input(type="text" placeholder="Nhập họ tên" class="form-control")
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Mức độ quan trọng
+                  .form-design__form-input
+                    select(class="form-control")
+                      option(value="1") Level 1
+                      option(value="2") Level 2
+                      option(value="3") Level 3
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Mã hồ sơ
+                  .form-design__form-input
+                    input(type="text" class="form-control")
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Số VB đến trả lời
+                  .form-design__form-input
+                    input(type="text" class="form-control" placeholder="Nhập số ký hiệu gốc hoặc số")
+                    .form-design__text-note <span class="text-red">Số đến</span> (<span class="text-blue">Số ký hiệu gốc</span> <span class="text-bold">Cơ quan ban hành</span><span class="text-yellow">(Ngày ban hành)</span> - <span class="text-italic">Trích yếu</span>) 
+              .col-12.col-xl-6
+                .form-design__row.no-respon
+                  label Cần phúc đáp
+                  .form-design__form-input
+                    label.form-select
+                      input(type="checkbox")
+                      span
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Người xử lý tiếp theo
+                  .form-design__form-input
+                    input(type="text" placeholder="Nhập họ tên" class="form-control")
+              .col-12
+                .form-design__row 
+                  label Ghi chú
+                  .form-design__form-input
+                    textarea(placeholder="Nội dung ghi chú" class="form-control")
+              .col-12.col-xl-6
+                .form-design__row.no-respon
+                  label Văn bản chỉ đạo
+                  .form-design__form-input
+                    label.form-select
+                      input(type="checkbox")
+                      span
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Thời hạn xử lý
+                  .form-design__form-input
+                    .form-design__form-date
+                      input(type="text" class="form-control")
+                      span (Ngày)
+                      .form-design__form-icon.fa-calendar
+                        input(type="text" class="form-control")
+              .col-12.col-xl-6
+                .form-design__row 
+                  label.no-mg-top Phòng ban nhập <span class="text-red">(*)</span>
+                  .form-design__form-input Trung Tâm CNTT-TT
+              .col-12.col-xl-6
+                .form-design__row 
+                  label.no-mg-top Người nhập
+                  .form-design__form-input Nguyễn Đình Thân
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Nơi nhận
+                  .form-design__form-input
+                    .form-design__form-group
+                      input(type="text" placeholder="Nhập từ khoá tìm kiếm" class="form-control")
+                      .form-design__form-group--addon
+                        button.btn.btn-default
+                          i.fa.fa-copy
+                    .form-design__text-note Chú ý: Đơn vị gửi liên thông
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Đính kèm tập tin <span class="text-red">(*)</span>
+                  .form-design__form-input
+                    input(type="file" id="file" class="form-control")
+                .form-design__row 
+                  label Tập hồ sơ
+                  .form-design__form-input
+                    input(type="text" placeholder="Nhập tiêu đề hoặc số hiệu" class="form-control")
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Đơn vị thực hiện <span class="text-red">(*)</span>
+                  .form-design__form-input
+                    input(type="text" placeholder="Nhập tê hoặc mã" class="form-control")
+              .col-12.col-xl-6
+                .form-design__row 
+                  label Thời gian hoàn thành <span class="text-red">(*)</span>
+                  .form-design__form-input
+                    .form-design__form-date
+                      .form-design__form-icon.fa-calendar
+                        input(type="text" class="form-control")
+      .box__footer.d-flex.justify-content-end 
+        button.btn.btn-primary Lưu
+

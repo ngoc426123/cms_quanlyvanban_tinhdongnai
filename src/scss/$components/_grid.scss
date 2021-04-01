@@ -7,8 +7,7 @@
   &-sm-40 {
     flex: 0 0 40%;
     max-width: 40%;
-    padding-right: 5px;
-    padding-left: 5px;
+    
 
     @include mq(1200) {
       flex: 0 0 100%;
@@ -19,12 +18,15 @@
   &-sm-60 {
     flex: 0 0 60%;
     max-width: 60%;
-    padding-right: 5px;
-    padding-left: 5px;
 
     @include mq(1200) {
       flex: 0 0 100%;
       max-width: 100%;
     }
   }
+}
+
+*[class^="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
 }
