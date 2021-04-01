@@ -1,6 +1,6 @@
 .sidebar(data-sidebar)
   .sidebar__wrapper
-    .sidebar__item-menu
+    .sidebar__item-menu(data-menu-item)
       .sidebar__item-menu--item
         .sidebar__item-menu--icon
           .sidebar__item-menu--image
@@ -8,7 +8,19 @@
           .sidebar__item-menu--count 0
         .sidebar__item-menu--text Văn bản đến
         a(href="").sidebar__item-menu--link
-    .sidebar__item-menu
+        .sidebar__item-menu--toggle(data-menu-toggle)
+          i.fa.fa-chevron-circle-down
+      .sidebar__item-menu--submenu(data-menu-submenu)
+        ul
+          li
+            a(href="") Sub menu 1
+          li
+            a(href="") Sub menu 1
+          li
+            a(href="") Sub menu 1
+          li
+            a(href="") Sub menu 1
+    .sidebar__item-menu(data-menu-item)
       .sidebar__item-menu--item
         .sidebar__item-menu--icon
           .sidebar__item-menu--image
@@ -16,7 +28,15 @@
           .sidebar__item-menu--count 0
         .sidebar__item-menu--text Văn bản đi
         a(href="").sidebar__item-menu--link
-    .sidebar__item-menu
+        .sidebar__item-menu--toggle(data-menu-toggle)
+          i.fa.fa-chevron-circle-down
+      .sidebar__item-menu--submenu(data-menu-submenu)
+        ul
+          li
+            a(href="") Sub menu 1
+          li
+            a(href="") Sub menu 1
+    .sidebar__item-menu(data-menu-item)
       .sidebar__item-menu--item
         .sidebar__item-menu--icon
           .sidebar__item-menu--image
@@ -24,6 +44,16 @@
           .sidebar__item-menu--count 0
         .sidebar__item-menu--text Văn bản nội bộ
         a(href="").sidebar__item-menu--link
+        .sidebar__item-menu--toggle(data-menu-toggle)
+          i.fa.fa-chevron-circle-down
+      .sidebar__item-menu--submenu(data-menu-submenu)
+        ul
+          li
+            a(href="") Sub menu 1
+          li
+            a(href="") Sub menu 1
+          li
+            a(href="") Sub menu 1
     .sidebar__group-menu
       .sidebar__group-menu--item
         a(href="") Loại thư

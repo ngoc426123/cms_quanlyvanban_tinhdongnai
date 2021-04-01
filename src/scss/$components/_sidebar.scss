@@ -1,4 +1,6 @@
 .sidebar {
+  $element: &;
+
   width: 280px;
   margin-right: 20px;
 
@@ -40,28 +42,45 @@
   }
 
   &__item-menu {
-    position: relative;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    background-color: $color-white-1;
+    box-shadow: 0 0 30px $color-shadow-1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &:hover {
+      background-color: $color-blue-10;
+    }
 
     &--item {
       display: flex;
       align-items: center;
       flex-shrink: 0;
-      height: 80px;
-      padding: 10px 30px;
-      margin-bottom: 10px;
-      background-color: $color-white-1;
-      box-shadow: 0 0 30px $color-shadow-1;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
+      position: relative;
+      padding: 0 30px;
+      padding-right: 45px;
+      min-height: 60px;
       position: relative;
 
       @include mq(991) {
         box-shadow: none;
       }
+    }
 
-      &:hover {
-        background-color: $color-blue-10;
-      }
+    &--toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: $color-blue-8;
+      position: absolute;
+      @extend %prr;
+      right: 5px;
+      z-index: 2;
+      cursor: pointer;
+      transition: all 0.3s linear;
     }
 
     &--icon {
@@ -109,6 +128,44 @@
       right: 0;
       bottom: 0;
       left: 0;
+      z-index: 1;
+    }
+
+    &--submenu {
+      display: none;
+      margin-top: 10px;
+
+      ul {
+        padding: 0 30px;
+      }
+
+      a {
+        display: block;
+        padding: 5px 10px;
+        padding-left: 20px;
+        position: relative;
+        color: $color-blue-8;
+
+        &::before {
+          content: "\f111";
+          @extend %font-icon;
+          position: absolute;
+          @extend %pll;
+          font-size: 6px;
+        }
+
+        &:hover {
+          color: $color-blue-6;
+        }
+      }
+    }
+
+    &.active {
+      #{$element}__item-menu {
+        &--toggle {
+          transform: translateY(-50%) rotate(-180deg);
+        }
+      }
     }
   }
 
